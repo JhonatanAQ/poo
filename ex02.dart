@@ -7,10 +7,10 @@ class Relogio {
       if(this.hora < 0 && this.hora > 23 ){
         throw ("Horas deve estar entre 0 e 23.");
       } 
-      if(this.minuto <= 0){
+      if(this.minuto < 0 && this.minuto > 59){
         throw("Minuto deve estar entre 0 e 59.");
       }
-      if(this.segundo <= 0){
+      if(this.segundo < 0 && this.segundo > 59){
         throw("Segundo deve estar entre 0 e 59.");
       }
   }
