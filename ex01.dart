@@ -10,14 +10,11 @@ class Pessoa {
       if(this.idade <= 0){
         throw("Idade tem que ser maior que zero.");
       }
-    return ;
   }
-  
   void exibirDados(){
     print(" Nome: $name \n Idade: $idade \n\n");
   }
 }
-
 void main() {
     Pessoa p1 = Pessoa("Jhonatan",25);
     Pessoa p2 = Pessoa("Jhenifer",24);
