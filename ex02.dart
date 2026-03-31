@@ -1,21 +1,21 @@
 class Relogio {
-  int hora;
-  int minuto;
-  int segundo;
+  int _hora;
+  int _minuto;
+  int _segundo;
   
-  Relogio(this.hora ,this.minuto,this.segundo){
-      if(this.hora < 0 && this.hora > 23 ){
+  Relogio(this._hora ,this._minuto,this._segundo){
+      if(this._hora < 0 && this._hora > 23 ){
         throw ("Horas deve estar entre 0 e 23.");
       } 
-      if(this.minuto < 0 && this.minuto > 59){
+      if(this._minuto < 0 && this._minuto > 59){
         throw("Minuto deve estar entre 0 e 59.");
       }
-      if(this.segundo < 0 && this.segundo > 59){
+      if(this._segundo < 0 && this._segundo > 59){
         throw("Segundo deve estar entre 0 e 59.");
       }
   }
   void exibirHorario(){
-    print("\n$hora: $minuto: $segundo ");
+    print("\n$_hora: $_minuto: $_segundo ");
   }
 }
 
