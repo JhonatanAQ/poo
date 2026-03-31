@@ -14,28 +14,34 @@ class Aluno {
   }
   
   double calcularMedia(){
-    double res = _nota1+_nota2/2;
-    
+    double sum = _nota1+_nota2;
+    double res = sum/2;
     return res;
   }
   void verificarAprovacao(){
-    double res = _nota1+_nota2/2;
+    double res = calcularMedia();
+  
     
     if(res >= 6){
-      
+      print("Aprovado:$res");
     }else{
-      
+      print("Reprovado:$res");
     }
-
   }
   void exibirBoletim(){
-
+    print("Nome:$_nome");
+    print("Primeira nota:$_nota1");
+    print("Segunda nota:$_nota2");
+    verificarAprovacao();
   }
   
 }
 
 void main() {
-  Aluno l1 = Aluno();
-  l1.ligar();
+  Aluno l1 = Aluno("jhonatan",4.4,5.5);
+  print("Verificar Aprovação");
+  l1.verificarAprovacao();
+  print("\nExibir Boletim");
+  l1.exibirBoletim();
 
 }
