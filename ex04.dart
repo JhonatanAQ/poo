@@ -1,23 +1,23 @@
 class Lampada {
-  bool ligada ;
-  int quantidadeLigacoes;
-  bool queimada ;
+  bool _ligada ;
+  int _quantidadeLigacoes;
+  bool _queimada ;
 
-  Lampada():ligada = false,quantidadeLigacoes = 0, queimada = false ;
+  Lampada():_ligada = false,_quantidadeLigacoes = 0, _queimada = false ;
   
 
   void ligar (){
      // quantidadeLigacoes inicia em 0 logo tem que subitrair por 4 .
-    if(quantidadeLigacoes >= 4 ){
-      ligada = false ;
-      queimada = true;
+    if(_quantidadeLigacoes >= 4 ){
+      _ligada = false ;
+      _queimada = true;
       print("A lâmpada está queimada e não pode ser ligada.");
       return ;
     }
-    if(!ligada){
-      ligada = true;
+    if(!_ligada){
+      _ligada = true;
       print("Lâmpada ligada.");
-      quantidadeLigacoes = quantidadeLigacoes + 1; 
+      _quantidadeLigacoes = _quantidadeLigacoes + 1; 
     }else{
       print("Lâmpada já está ligada.");
     }
@@ -25,16 +25,16 @@ class Lampada {
   }
   
   void desligar(){
-      ligada = false;
+      _ligada = false;
       print("Lâmpada desligada.");
   }
   
   void exibirEstado(){
 
-    print("\n\nA lâmpada \n\t- Está ${ligada ? "ligada" : "desligada"}.");
+    print("\n\nA lâmpada \n\t- Está ${_ligada ? "ligada" : "desligada"}.");
     // quantidadeLigacoes inicia em 0 logo tem que subitrair por + 1.
-    print("\t- Foi ligada ${quantidadeLigacoes + 1} X."); 
-    print("\t- E ${queimada ?"está queimada":"não esta queimada"}.");
+    print("\t- Foi ligada ${_quantidadeLigacoes + 1} X."); 
+    print("\t- E ${_queimada ?"está queimada":"não esta queimada"}.");
   }
 }
 
