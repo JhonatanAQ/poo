@@ -1,24 +1,24 @@
 class Data {
-  int dia;
-  int mes;
-  int ano;
+  int _dia;
+  int _mes;
+  int _ano;
 
-  Data(this.dia, this.mes, this.ano) {
-    if (this.dia <= 0 && this.dia > 31) {
+  Data(this._dia, this._mes, this._ano) {
+    if (this._dia <= 0 && this._dia > 31) {
       throw ("Dia deve estar entre 1 e 31.");
     }
-    if (this.mes <= 0 && this.dia > 12) {
+    if (this._mes <= 0 && this._mes > 12) {
       throw ("Mes deve estar entre 1 e 12.");
     }
-    if (this.ano <= 0) {
+    if (this._ano <= 0) {
       throw ("Ano deve ser maior que 0");
     }
   }
 
   void exibirHorario() {
-    String diaString = dia < 10 ? dia.toString().padLeft(2, '0') : dia.toString();
-    String mesString = mes < 10 ? mes.toString().padLeft(2, '0') : mes.toString();
-    String anoString = ano < 10 ? ano.toString().padLeft(2, '0') : ano.toString();
+    String diaString = _dia < 10 ? _dia.toString().padLeft(2, '0') : _dia.toString();
+    String mesString = _mes < 10 ? _mes.toString().padLeft(2, '0') : _mes.toString();
+    String anoString = _ano < 10 ? _ano.toString().padLeft(2, '0') : _ano.toString();
     
     print("\n$diaString/ $mesString/ $anoString ");
   }
