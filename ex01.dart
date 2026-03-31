@@ -1,18 +1,18 @@
 class Pessoa {
   
-  String name;  
-  int idade;
+  String _name;  
+  int _idade;
   
-  Pessoa(this.name ,this.idade){
-      if(this.name == ""){
+  Pessoa(this._name ,this._idade){
+      if(this._name == ""){
         throw ("Nome não pode ser vazio.");
       } 
-      if(this.idade <= 0){
+      if(this._idade <= 0){
         throw("Idade tem que ser maior que zero.");
       }
   }
   void exibirDados(){
-    print(" Nome: $name \n Idade: $idade \n\n");
+    print(" Nome: $_name \n Idade: $_idade \n\n");
   }
 }
 void main() {
