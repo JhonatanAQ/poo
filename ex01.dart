@@ -1,26 +1,47 @@
-class Pessoa {
+class Lampada {
+  bool _ligada;
+  int _intensidade;
   
-  String _name;  
-  int _idade;
+  Lampada():_ligada = false,_intensidade = 50;
   
-  Pessoa(this._name ,this._idade){
-      if(this._name == ""){
-        throw ("Nome não pode ser vazio.");
-      } 
-      if(this._idade <= 0){
-        throw("Idade tem que ser maior que zero.");
-      }
+  void ligar (){
+    _ligada = true;
+    if(_intensidade == 0){
+      _intensidade = _intensidade + 10;
+    }
+    exibirEstado();
   }
-  void exibirDados(){
-    print(" Nome: $_name \n Idade: $_idade \n\n");
+  void desligar(){
+    _ligada = false;
+    _intensidade = 0;
+    exibirEstado();
+  }
+  void aumentar(){
+    if(_ligada){
+      _intensidade = _intensidade + 10;
+    }
+    exibirEstado();
+  }
+  void diminuir(){
+    if(_ligada){
+      _intensidade = _intensidade - 10;
+    }
+    exibirEstado();
+  }
+  void exibirEstado(){
+    print("\n\nLâmpada 💡 \n\t- Está ${_ligada ? "ligada" : "desligada"}.");
+    print("\t- Sua intensidade : ${_intensidade} .");
   }
 }
+
 void main() {
-    Pessoa p1 = Pessoa("Jhonatan",25);
-    Pessoa p2 = Pessoa("Jhenifer",24);
-    Pessoa p3 = Pessoa("Bernadete",49);
-  
-    p1.exibirDados();
-    p2.exibirDados();
-    p3.exibirDados();
+  Lampada l1 = Lampada();
+  l1.ligar();
+  l1.aumentar();
+  l1.diminuir();
+  l1.diminuir();
+  l1.desligar();
+  l1.aumentar();
+  l1.diminuir();
+
 }
