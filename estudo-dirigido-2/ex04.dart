@@ -11,7 +11,7 @@ class ContaBancaria {
     } else {
       print("Erro: O saldo não pode ser negativo.");
     }
-   }
+  }
   void depositar(double valor){
     this._saldo = _saldo + valor;
   }
